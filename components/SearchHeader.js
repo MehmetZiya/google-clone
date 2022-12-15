@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useRef } from 'react'
 import { SearchIcon, MicrophoneIcon, XIcon } from '@heroicons/react/solid'
 import User from './User'
+import SearchHeaderOptions from './SearchHeaderOptions'
 
 const SearchHeader = () => {
   const router = useRouter()
@@ -24,7 +25,7 @@ const SearchHeader = () => {
           priority
           className='cursor-pointer'
         />
-        <form className='flex border border-gray-200 rounded-full shadow-lg px-6 py-3 ml-10 mr-5 flex-grow max-w3xl items-center'>
+        <form className='flex border border-gray-200 rounded-full shadow-lg px-6 py-3 ml-10 mr-5 flex-grow max-w-3xl items-center'>
           <input
             type='text'
             className='w-full focus:outline-none'
@@ -41,6 +42,7 @@ const SearchHeader = () => {
         </form>
         <User className='ml-auto whitespace-nowrap' />
       </div>
+      <SearchHeaderOptions />
     </header>
   )
 }
