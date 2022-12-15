@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { SearchIcon, MicrophoneIcon, XIcon } from '@heroicons/react/solid'
 import User from './User'
 import SearchHeaderOptions from './SearchHeaderOptions'
+import Link from 'next/link'
 
 const SearchHeader = () => {
   const router = useRouter()
@@ -17,14 +18,16 @@ const SearchHeader = () => {
   return (
     <header className='sticky top-0 bg-white'>
       <div className='flex w-full p-6 items-center'>
-        <Image
-          src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png'
-          alt='user-image'
-          width={120}
-          height={40}
-          priority
-          className='cursor-pointer'
-        />
+        <Link href='/'>
+          <Image
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png'
+            alt='user-image'
+            width={120}
+            height={40}
+            priority
+            className='cursor-pointer'
+          />
+        </Link>
         <form className='flex border border-gray-200 rounded-full shadow-lg px-6 py-3 ml-10 mr-5 flex-grow max-w-3xl items-center'>
           <input
             type='text'

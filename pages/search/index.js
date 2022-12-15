@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import ImageResults from '../../components/ImageResults'
 import SearchHeader from '../../components/SearchHeader'
 import SearchResults from '../../components/SearchResults'
 
@@ -16,7 +17,11 @@ const search = ({ results }) => {
       <SearchHeader />
 
       {/** Search Results */}
-      <SearchResults results={results} />
+      {router.query.searchType === 'image' ? (
+        <ImageResults results={results} />
+      ) : (
+        <SearchResults results={results} />
+      )}
     </div>
   )
 }
