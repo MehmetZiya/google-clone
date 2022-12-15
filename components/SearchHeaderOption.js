@@ -3,7 +3,7 @@ import React from 'react'
 
 const SearchHeaderOption = ({ title, Icon, selected }) => {
   const router = useRouter()
-  const selectTab = (title) => {
+  const selectTab = () => {
     router.push(
       `/search?term=${router.query.term}&searchType=${
         title === 'Images' ? 'image' : ''
