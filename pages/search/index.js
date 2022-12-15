@@ -4,10 +4,10 @@ import ImageResults from '../../components/ImageResults'
 import SearchHeader from '../../components/SearchHeader'
 import SearchResults from '../../components/SearchResults'
 
-const search = ({ results }) => {
+const Search = ({ results }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter()
-  console.log(results)
+
   return (
     <div>
       <Head>
@@ -44,4 +44,4 @@ export async function getServerSideProps(context) {
   }
 }
 
-export default search
+export default Search
